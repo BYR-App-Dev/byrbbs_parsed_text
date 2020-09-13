@@ -1,0 +1,14 @@
+name: byrbbs_parsed_text
+description: a widget to display NForum articles
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_markdown: ^0.4.3
+  fast_gbk: ^0.1.2+1
+  characters: ^1.0.0
