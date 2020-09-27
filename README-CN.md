@@ -38,3 +38,8 @@
 |refresherAttachmentWidget| 生成自定义刷新动画显示控件的函数|
 |otherAttachmentWidget| 生成其他附件显示控件的函数|
 |externalImageWidget| 生成外部图片显示控件的函数|
+
+## 依赖
+- flutter_markdown: ^0.4.3
+- fast_gbk: ^0.1.2+1
+- characters: ^1.0.0

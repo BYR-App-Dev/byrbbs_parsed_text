@@ -38,3 +38,8 @@ A Flutter widget to display NForum articles
 |refresherAttachmentWidget| how to generate a widget for customized refresher attachment display|
 |otherAttachmentWidget| how to generate a widget for other attachment display|
 |externalImageWidget| how to generate a widget for external (non-attachment) image display|
+
+## Dependencies
+- flutter_markdown: ^0.4.3
+- fast_gbk: ^0.1.2+1
+- characters: ^1.0.0

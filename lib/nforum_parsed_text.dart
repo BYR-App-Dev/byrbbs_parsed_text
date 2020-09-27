@@ -358,30 +358,51 @@ class NForumParsedText extends StatelessWidget {
       NForumTextParsingConfig parsingConfig, String str, TextStyle defT, GestureRecognizer rec, RegExpMatch quote) {
     return [
       TextSpan(
-        children: _bbText(parsingConfig, str.substring(0, quote.start), defT, rec),
+        children: _bbText(parsingConfig, str.substring(0, quote.start).trim(), defT, rec),
         recognizer: rec,
       ),
       WidgetSpan(
-        child: Row(
-          children: <Widget>[
-            Transform.rotate(
-              angle: math.pi,
-              child: Icon(Icons.format_quote),
-            ),
-            Expanded(
-              child: Container(
-                margin: EdgeInsets.only(left: 5),
-                height: 0.4,
-                color: parsingConfig.quoteColor,
+        child: Container(
+          margin: EdgeInsets.only(top: 8.0),
+          color: Color.fromARGB(
+            255,
+            255 - 10,
+            255 - 9,
+            255 - 8,
+          ),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                child: Transform.rotate(
+                  angle: math.pi,
+                  child: Icon(
+                    Icons.format_quote,
+                    color: parsingConfig.quoteColor,
+                  ),
+                ),
               ),
-            ),
-          ],
-        ),
-      ),
-      TextSpan(
-        text: _stripText(_retrieveEmojis(str.substring(quote.start, quote.end))),
-        style: defT.copyWith(
-          color: parsingConfig.quoteColor,
+              Expanded(
+                child: Container(
+                  color: Color.fromARGB(
+                    255,
+                    255 - 10,
+                    255 - 9,
+                    255 - 8,
+                  ),
+                  padding: EdgeInsets.only(top: 8.0, left: 0, bottom: 8, right: 8),
+                  child: Text(
+                    _stripText(_retrieveEmojis(str.substring(quote.start, quote.end))),
+                    style: defT.copyWith(
+                      color: parsingConfig.quoteColor,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       TextSpan(
