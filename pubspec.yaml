@@ -12,3 +12,7 @@ dependencies:
   flutter_markdown: ^0.4.3
   fast_gbk: ^0.1.2+1
   characters: ^1.0.0
+
+flutter:
+  assets:
+    - resources/em/
